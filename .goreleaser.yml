@@ -39,8 +39,8 @@ dockers:
     skip_push: false
     dockerfile: Dockerfile
     image_templates:
-      - quay.io/helmpack/chart-testing:{{ .Tag }}
-      - quay.io/helmpack/chart-testing:latest
+      - quay.io/tauerbec/chart-testing:{{ .Tag }}
+      - quay.io/tauerbec/chart-testing:latest
     build_flag_templates:
       - --label=org.opencontainers.image.version={{ .Version }}
       - --label=org.opencontainers.image.revision={{ .Commit }}
