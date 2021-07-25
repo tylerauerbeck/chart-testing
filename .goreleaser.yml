@@ -34,7 +34,7 @@ checksum:
 snapshot:
   name_template: "{{ .Tag }}-next"
 dockers:
-  - skip_push: false
+  - skip_push: true 
     use_buildx: true
     dockerfile: Dockerfile
     image_templates:
@@ -54,7 +54,7 @@ dockers:
     extra_files:
       - etc/chart_schema.yaml
       - etc/lintconf.yaml
-  - skip_push: false
+  - skip_push: true 
     use_buildx: true
     dockerfile: Dockerfile
     image_templates:
