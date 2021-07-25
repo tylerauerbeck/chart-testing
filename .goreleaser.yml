@@ -79,7 +79,7 @@ docker_manifests:
   image_templates:
   - quay.io/tauerbec/chart-testing:latest-amd64
   - quay.io/tauerbec/chart-testing:latest-arm64
-- name_template: quay.io/tauerbec/chart-testing:{{ .Version }}
+- name_template: quay.io/tauerbec/chart-testing:{{ .Tag }}
   image_templates:
-  - quay.io/tauerbec/chart-testing:{{ .Version }}-amd64
-  - quay.io/tauerbec/chart-testing:{{ .Version }}-arm64
+  - quay.io/tauerbec/chart-testing:{{ .Tag }}-amd64
+  - quay.io/tauerbec/chart-testing:{{ .Tag }}-arm64
