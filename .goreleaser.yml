@@ -56,7 +56,6 @@ dockers:
   - skip_push: false
     dockerfile: Dockerfile
     goarch: arm64
-    use: buildx
     image_templates:
       - quay.io/tylerauerbeck/chart-testing:{{ .Tag }}-arm64
       - quay.io/tylerauerbeck/chart-testing:latest-arm64
