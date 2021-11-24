@@ -59,7 +59,7 @@ dockers:
       - quay.io/tylerauerbeck/chart-testing:{{ .Tag }}-arm64
       - quay.io/tylerauerbeck/chart-testing:latest-arm64
     build_flag_templates:
-      - --platform=linux/arm64
+      - --platform=linux/arm64/v8
       - --label=org.opencontainers.image.version={{ .Version }}
       - --label=org.opencontainers.image.revision={{ .Commit }}
       - --label=org.opencontainers.image.title={{ .ProjectName }}
