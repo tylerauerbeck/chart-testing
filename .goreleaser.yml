@@ -36,8 +36,9 @@ snapshot:
 dockers:
   - skip_push: false
     dockerfile: Dockerfile
+    use_buildx: true
     image_templates:
-#      - quay.io/tylerauerbeck/chart-testing:{{ .Tag }}-amd64
+      - quay.io/tylerauerbeck/chart-testing:{{ .Tag }}-amd64
       - quay.io/tylerauerbeck/chart-testing:latest-amd64
     build_flag_templates:
       - --platform=linux/amd64
@@ -56,6 +57,7 @@ dockers:
   - skip_push: false
     dockerfile: Dockerfile
     goarch: arm64
+    use_buildx: true
     image_templates:
       - quay.io/tylerauerbeck/chart-testing:{{ .Tag }}-arm64
       - quay.io/tylerauerbeck/chart-testing:latest-arm64
