@@ -6,6 +6,12 @@ on:
   pull_request:
     branches:
       - '*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version
+        required: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
